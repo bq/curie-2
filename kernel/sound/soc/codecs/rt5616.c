@@ -61,6 +61,10 @@ static struct rt5616_init_reg init_list[] = {
 	{RT5616_HPO_MIXER	, 0x4000}, //HPVOL -> HPO
 #if defined(CONFIG_MALATA_D7005) || defined(CONFIG_MALATA_D7803_Q7)
 	{RT5616_HP_VOL		, 0x8d8d}, //unmute HPVOL
+#elif defined(CONFIG_MALATA_D8009)
+    {RT5616_HP_VOL          , 0x8b8b}, //unmute HPVOL
+#elif defined(CONFIG_MALATA_D1014)
+	{RT5616_HP_VOL		, 0x8c8c}, //unmute HPVOL
 #else
 	{RT5616_HP_VOL		, 0x8f8f}, //unmute HPVOL
 #endif
@@ -137,7 +141,7 @@ static const u16 rt5616_reg[RT5616_DEVICE_ID + 1] = {
 #if defined(CONFIG_MALATA_D7005)	//Modfied by EvanZeng for the volume of speaker is very high
 	[RT5616_LOUT_CTRL1] = 0x9292,
 #elif defined(CONFIG_MALATA_D8009)//0.7W
-	[RT5616_LOUT_CTRL1] = 0x9393,
+	[RT5616_LOUT_CTRL1] = 0x9595,
 #elif defined(CONFIG_MALATA_C1017)
 	[RT5616_LOUT_CTRL1] = 0x8787,
 #elif defined(CONFIG_MALATA_D1014)
