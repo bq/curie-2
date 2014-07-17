@@ -18,8 +18,7 @@ clone the project:
 After it, choose the version you would like to build:
 
 	$ cd curie-2/
-	$ git checkout 2.0.0_20140125-1425
-
+	$ git checkout 2.0.0_20140312-1248
 
 Finally, build the kernel according the next defconfig files:
 
